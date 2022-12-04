@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.nav_space_between {
+    row-gap: 20px;
+    margin-left: 120px !important;
+}
+
+.btn-panjang{
+    width: 100px;
+    margin-right: 20px;
+}
+
+.nav-left{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section h1{
+    font-size: 55px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.test_ubah{
+    background: #2155CD !important;
+}
+
+.centered-wrapper{
+    margin: auto;
+    width: 500px;
+    height: 650px;
+}
+
+.wrapper-upload{
+    position: absolute;
+    background-color: white;
+    width: inherit;
+    height: 500px;
+}
+
+.dashed-border{
+    margin-top: 50px !important;
+    margin: auto;
+    width: 300px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232155CDFF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 10px;
+    height: 300px;
+}
+
+.btn-prediksi{
+    margin: 50px 140px;
+    width: 214px;
+}
+
+.dashed-border > img{
+    margin-left: 125px;
+    margin-top: 80px;
+}
+
+.dashed-border > p:first-of-type {
+    margin-top: 20px;
+    color: #2155CD;
+}
+
+.dashed-border > p{
+    margin-top: -10px;
+    color: #2155CD;
+}
+
+.dashed-border > button{
+    margin-left: 75px;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    margin-left: 75px;
+    border: 1px solid #2155CD;
+    display: inline-block;
+    padding: 6px 12px;
+    color: #2155CD;
+    cursor: pointer;
+}
