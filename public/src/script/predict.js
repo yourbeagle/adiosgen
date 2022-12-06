@@ -3,6 +3,10 @@ const fileInput = document.getElementById("file-upload")
 const fileBtn = document.getElementById("label-file")
 const wrapcon = document.getElementById("wrapped-container")
 const wrapup = document.getElementById("wrap-upload")
+const textHide = document.getElementById("text-hidden")
+const btnClear = document.getElementById("clear-button")
+const predButton = document.getElementById("predict-button")
+
 let imageLoaded = false;
 
 $("#file-upload").change(function () {
@@ -32,9 +36,28 @@ function updateDisplay(){
 	filenameSpan.classList.remove("hidden")
 	wrapcon.classList.add("hidden")
 	wrapup.classList.add("add-height")
-
 }
 
+function clearFileInput(ctrl) {
+	try {
+	  ctrl.value = null;
+	} catch(ex) { }
+	if (ctrl.value) {
+	  ctrl.parentNode.replaceChild(ctrl.cloneNode(true), ctrl);
+	}
+}
+
+$("#clear-button").click(function (){
+	clearFileInput(document.getElementById("file-upload"));
+	filenameSpan.classList.add('hidden')
+	wrapcon.classList.remove('hidden')
+	predButton.classList.remove('hidden')
+	$("#prediction-list").empty()
+	wrapup.classList.remove("add-height")
+	textHide.classList.add('hidden')
+	btnClear.classList.add('hidden')
+	document.getElementById("selected-image").setAttribute('src', '')
+})
 
 let model;
 let modelLoaded = false;
@@ -83,7 +106,10 @@ $("#predict-button").click(async function () {
 
 	$("#prediction-list").empty();
 	result_predict.forEach(function (p) {
-			$("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(1)*100 + "%"}</li>`);
+			$("#prediction-list").append(`<div class="div-result">${p.className}: ${p.probability.toFixed(1)*100 + "%"}</div>`);
 		});
-		$("#predict-button").toggle('show')
+		predButton.classList.add('hidden')
+		btnClear.classList.remove('hidden')
+		textHide.classList.remove('hidden')
+		
 });
