@@ -60,14 +60,18 @@ body {
   height: 300px;
 }
 
+.image-container{
+  margin: 20px 130px;
+}
+
 .btn-prediksi {
-  margin: 50px 140px;
+  margin: 00px 140px;
   width: 214px;
 }
 
 .dashed-border > img {
   margin-left: 125px;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .dashed-border > p:first-of-type {
@@ -87,13 +91,27 @@ body {
 input[type="file"] {
   display: none;
 }
+
 .custom-file-upload {
   margin-left: 75px;
   border: 1px solid #2155cd;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 6px 12px;
   color: #2155cd;
   cursor: pointer;
+}
+
+.add-height{
+  height: 550px;
+}
+
+
+#filename-span{
+  color: #2155CD;
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-group > div {
@@ -108,6 +126,10 @@ input[type="file"] {
   background-color: #2155cd;
   border-radius: 10px;
   opacity: 1;
+}
+
+.image-container{
+  margin: 20px 130px;
 }
 
 .img-fluid {
@@ -146,6 +168,31 @@ input[type="file"] {
   max-width: 355px;
   height: auto;
 }
+
+#prediction-list{
+  margin: 10px 100px 0;
+}
+
+#text-hidden{
+  margin: 10px 100px 0;
+}
+
+.hidden{
+  display: none !important;
+}
+
+.div-result{
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #0AA1DD;
+}
+
+#clear-button{
+  margin-top: 20px;
+}
+
 
 @media only screen and (max-width: 780px) {
   .deskripsi {
