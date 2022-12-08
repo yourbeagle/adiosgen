@@ -18,10 +18,13 @@
     <title>Document</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand nav-left" href=".">Adios Gen</a>
-        <div class="collapse navbar-collapse justify-content-center nav-center">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Beranda</a>
@@ -61,29 +64,29 @@
         <h3 class="text-center mt-5 fw-bold">Layanan Kami</h3>
         <h5 class="text-center mt-2 mb-5">Diagnosa Penyakit mudah dan cepat</h5>
         <div class="layanan card-group justify-content-center gap-4">
-            <div id="kartu" class="card text-white rounded">
-                <img src="./assets/images/akurasi.png" class="card-img-top mx-auto mt-4" style="width:77px !important">
-                <div class="card-body">
-                <p class="judul card-title text-center mt-4 mb-4 fw-bold fs-5">Prediksi</p>
-                <p class="card-text text-center">Diagnosa penyakit  kanker dan pneumonia dengan mudah dan dalam waktu singkat dengan akurasi yang tinggi</p>
-                </div>
-            </div>
-            <div class="card text-white rounded">
-                <img src="./assets/images/akurasi.png" class="card-img-top mx-auto mt-4" style="width:77px !important">
-                <div class="card-body">
-                <p class="judul card-title text-center mt-4 mb-4 fw-bold fs-5">Artikel</p>
-                <p class="card-text text-center">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-            <div class="card text-white rounded">
-                <img src="./assets/images/akurasi.png" class="card-img-top mx-auto mt-4" style="width:77px !important">
-                <div class="card-body">
-                <p class="judul card-title text-center mt-4 mb-4 fw-bold fs-5">Konsultasi</p>
-                <p class="card-text text-center">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
+            <div class="card-layanan ">
+              <div class="circle-icon position-relative mx-auto">
+                <img src="./assets/images/persentase.png" class="position-absolute top-50 start-50 translate-middle" style="width: 55px;">
+              </div>
+              <h3 class=" text-center mt-4  fw-bold">Prediksi</h3>
+              <p class="card-text text-center mt-3">Diagnosa penyakit  kanker dan pneumonia dengan mudah dan dalam waktu singkat dengan akurasi yang tinggi</p>
+          </div>
+          <div class="card-layanan">
+              <div class="circle-icon position-relative mx-auto">
+                <img src="./assets/images/book-open.png" class="position-absolute top-50 start-50 translate-middle" style="width: 46px;">
+              </div>
+              <h3 class=" text-center mt-4  fw-bold">Artikel</h3>
+              <p class="card-text text-center mt-3">Diagnosa penyakit  kanker dan pneumonia dengan mudah dan dalam waktu singkat dengan akurasi yang tinggi</p>
+          </div>
+          <div class="card-layanan">
+              <div class="circle-icon position-relative mx-auto">
+                <img src="./assets/images/users.png" class="position-absolute top-50 start-50 translate-middle" style="width: 35px;">
+              </div>
+              <h3 class=" text-center mt-4  fw-bold">Konsultasi</h3>
+              <p class="card-text text-center mt-3">Diagnosa penyakit  kanker dan pneumonia dengan mudah dan dalam waktu singkat dengan akurasi yang tinggi</p>
+          </div>
         </div>
-        </div>
+      </div>
 
         <section class="tentang">
           <div class="container">
