@@ -65,7 +65,7 @@ $( document ).ready(async function () {
 	modelLoaded = false;
 	$('.progress-bar').show();
     console.log( "Loading model..." );
-    model = await tf.loadLayersModel('./assets/models/model.json');
+    model = await tf.loadLayersModel('https://raw.githubusercontent.com/yourbeagle/model-adiosgen/main/model.json');
 	console.log(model);
     console.log( "Model loaded." );
 	$('.progress-bar').hide();
