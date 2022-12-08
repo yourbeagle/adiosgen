@@ -7,6 +7,7 @@
 
 html, body {
   overflow-x: hidden;
+  min-height: 100vh;
   font-family: "Poppins", sans-serif !important;
 }
 
@@ -73,6 +74,7 @@ html, body {
   background-color: white;
   width: inherit;
   height: 500px;
+  transition: ease all .5s;
 }
 
 .dashed-border {
@@ -119,13 +121,13 @@ input[type="file"] {
 .custom-file-upload {
   margin-left: 75px;
   border: 1px solid #2155cd;
-  /* display: inline-block; */
   padding: 6px 12px;
   color: #2155cd;
   cursor: pointer;
 }
 
 .add-height {
+  margin-bottom: 50px;
   height: 550px;
 }
 
@@ -153,10 +155,6 @@ input[type="file"] {
 
 .card-title:hover {
   color: #fff;
-}
-
-.image-container {
-  margin: 20px 130px;
 }
 
 .img-fluid {
@@ -314,6 +312,7 @@ input[type="file"] {
         transform: rotate(360deg);
     }
 }
+
 #loadingDiv {
     position:absolute;
     top:0;
@@ -327,6 +326,106 @@ input[type="file"] {
   #navbar_wrapper > div{
     margin-left: 0px !important;
   }
+}
+
+
+@media only screen and (max-width: 450px){
+
+  .centered-wrapper {
+    margin: auto;
+    width: 400px;
+    height: 450px;
+    margin-bottom: 50px;
+  }
+
+  #filename-span {
+    color: #2155cd;
+    margin-top: -8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .wrapper-upload{
+    width: 350px;
+    height: 350px;
+  }
+
+  .dashed-border{
+    margin-top: 50px !important;
+    margin: auto;
+    width: 200px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232155CDFF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 10px;
+    height: 200px;
+  }
+
+  
+  .image-container {
+    margin: 20px 100px;
+    width: 150px;
+  }
+
+
+  .dashed-border > img {
+    margin: 20px 75px 0px;
+  }
+
+  .dashed-border > p:first-of-type {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #2155cd;
+  }
+
+  .dashed-border > p {
+    margin-top: -10px;
+    font-size: 12px;
+    color: #2155cd;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .custom-file-upload {
+    margin-left: 40px;
+    border: 1px solid #2155cd;
+    width: 120px;
+    height: 30px;
+    font-size: 11px;
+    color: #2155cd;
+    cursor: pointer;
+  }
+
+  .btn-prediksi {
+    margin: -10px 100px 0px;
+    width: 150px;
+  }
+
+  #prediction-list {
+    margin: 10px 100px 0;
+  }
+  
+  #text-hidden {
+    margin: 10px 100px 0;
+  }
+
+  .div-result {
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #0aa1dd;
+  }
+
+  #clear-button {
+    margin-top: 10px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+
 }
 
 
