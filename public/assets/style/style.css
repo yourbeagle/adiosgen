@@ -337,6 +337,7 @@ input[type="file"] {
     height: 450px;
     margin-bottom: 50px;
   }
+  
 
   #filename-span {
     color: #2155cd;
@@ -347,6 +348,7 @@ input[type="file"] {
   }
 
   .wrapper-upload{
+    margin-left: 25px;
     width: 350px;
     height: 350px;
   }
@@ -359,13 +361,11 @@ input[type="file"] {
     border-radius: 10px;
     height: 200px;
   }
-
   
   .image-container {
     margin: 20px 100px;
     width: 150px;
   }
-
 
   .dashed-border > img {
     margin: 20px 75px 0px;
@@ -433,8 +433,6 @@ input[type="file"] {
   body {
     overflow-x: hidden !important;
   }
-
- 
 
   .deskripsi {
     flex-direction: column-reverse;
