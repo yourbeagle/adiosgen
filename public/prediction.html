@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -28,8 +28,14 @@
                 >Beranda</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Prediksi</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Prediksi
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="./prediction.html">Pneumnoia</a></li>
+                <li><a class="dropdown-item" href="#">Tuberculosis</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Artikel</a>
@@ -42,14 +48,6 @@
             </li>
           </ul>
         </div>
-        <div class="d-flex">
-          <button class="btn btn-outline-primary btn-panjang" type="submit">
-            Masuk
-          </button>
-          <button class="btn btn-primary btn-panjang" type="submit">
-            Daftar
-          </button>
-        </div>
       </div>
     </nav>
 
@@ -61,7 +59,7 @@
             <p class="text-white">Silahkan upload gambar ct scan yang anda ingin cek</p>
             <div class="wrapper-upload" id="wrap-upload">
                 <div id="wrapped-container" class="dashed-border">
-                    <img src="../images/file_upload.png" alt="">
+                    <img src="./assets/images/file_upload.png" alt="">
                     <p class="text-center">Drag and drop image here</p>
                     <p class="text-center">- OR -</p>
                     <label for="file-upload" class="custom-file-upload" id="label-file">
@@ -90,7 +88,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-    <script src="../script/target_classes.js"></script>
-    <script src="../script/predict.js"></script>
+    <script src="./assets/script/target_classes.js"></script>
+    <script src="./assets/script/predict.js"></script>
   </body>
 </html>
