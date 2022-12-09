@@ -6,6 +6,9 @@ const wrapup = document.getElementById("wrap-upload")
 const textHide = document.getElementById("text-hidden")
 const btnClear = document.getElementById("clear-button")
 const predButton = document.getElementById("predict-button")
+const selectedImg = document.getElementById("selected-image")
+const predictionList = document.getElementById("prediction-list")
+const alertModel = document.getElementById("alert-model")
 
 let imageLoaded = false;
 
@@ -52,6 +55,11 @@ $("#clear-button").click(function (){
 	filenameSpan.classList.add('hidden')
 	wrapcon.classList.remove('hidden')
 	predButton.classList.remove('hidden')
+	setTimeout(function(){
+		wrapcon.classList.remove('visuallyhidden')
+		predButton.classList.remove('visuallyhidden')
+	}, 50)
+	selectedImg.classList.add('hidden')
 	$("#prediction-list").empty()
 	wrapup.classList.remove("add-height")
 	textHide.classList.add('hidden')
@@ -64,10 +72,20 @@ let model;
 let modelLoaded = false;
 $( document ).ready(async function () {
 	modelLoaded = false;
+	$("#spinner-loading").show()
     console.log( "Loading model..." );
     model = await tf.loadLayersModel('https://raw.githubusercontent.com/yourbeagle/model-tuberculosis-adiosgen/main/model.json');
 	console.log(model);
     console.log( "Model loaded." );
+	$("#spinner-loading").hide()
+	wrapcon.classList.remove('hidden')
+	predButton.classList.remove('hidden')
+	alertModel.classList.remove('hidden')
+	setTimeout(function(){
+		wrapcon.classList.remove('visuallyhidden')
+		predButton.classList.remove('visuallyhidden')
+		alertModel.classList.remove('visuallyhidden')
+	}, 150)
 	modelLoaded = true;
 });
 
@@ -110,5 +128,12 @@ $("#predict-button").click(async function () {
 		predButton.classList.add('hidden')
 		btnClear.classList.remove('hidden')
 		textHide.classList.remove('hidden')
+		predictionList.classList.remove('hidden')	
+		setTimeout(function(){
+			predButton.classList.add('visuallyhidden')
+			btnClear.classList.remove('visuallyhidden')
+			textHide.classList.remove('visuallyhidden')
+			predictionList.classList.remove('visuallyhidden')
+		}, 50)
 		
 });

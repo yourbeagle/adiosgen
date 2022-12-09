@@ -76,8 +76,15 @@
         </div>
       </div>
     </nav>
+    <div class="position-relative">
+      <div id="alert-model" class="alert alert-success alert-dismissible fade show position-absolute top-0 end-0 mt-3 hidden visuallyhidden" role="alert" style="margin-right: 20px !important; width: 300px;">
+        <strong>Model</strong> Telah Berhasil Terload
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
 
     <div class="container">
+
       <h1
         class="text-center text-white fw-bold"
         style="font-size: 50px; margin-top: 100px"
@@ -91,7 +98,12 @@
           Silahkan upload gambar ct scan yang anda ingin cek
         </p>
         <div class="wrapper-upload" id="wrap-upload">
-          <div id="wrapped-container" class="dashed-border">
+          <div class="d-flex justify-content-center">
+            <div id="spinner-loading" class="spinner-border" style="width: 4.5rem; height: 4.5rem; margin-top: 200px;" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <div id="wrapped-container" class="dashed-border hidden visuallyhidden">
             <img src="./assets/images/file_upload.png" alt="" />
             <p class="text-center">Drag and drop image here</p>
             <p class="text-center">- OR -</p>
@@ -100,14 +112,14 @@
             </label>
             <input id="file-upload" class="hidden" type="file" />
           </div>
-          <img id="selected-image" class="image-container" width="250" alt="" />
+          <img id="selected-image" class="image-container hidden" width="250" alt="" />
           <p id="filename-span" class="hidden text-center mx-auto"></p>
-          <p id="text-hidden" class="hidden">Hasil :</p>
-          <button id="predict-button" class="btn btn-primary btn-prediksi">
+          <p id="text-hidden" class="hidden visuallyhidden">Hasil :</p>
+          <button id="predict-button" class="btn btn-primary btn-prediksi hidden visuallyhidden">
             PREDIKSI
           </button>
-          <div id="prediction-list"></div>
-          <button id="clear-button" class="btn btn-primary btn-prediksi hidden">
+          <div id="prediction-list" class="hidden visuallyhidden"></div>
+          <button id="clear-button" class="btn btn-primary btn-prediksi hidden visuallyhidden">
             Clear
           </button>
         </div>
@@ -153,7 +165,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-    <script src="./assets/script/script.js"></script>
     <script src="./assets/script/pneumonia/target_classes_pneumonia.js"></script>
     <script src="./assets/script/pneumonia/predict_pneumonia.js"></script>
    
