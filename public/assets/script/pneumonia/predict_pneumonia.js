@@ -6,6 +6,7 @@ const wrapup = document.getElementById("wrap-upload")
 const textHide = document.getElementById("text-hidden")
 const btnClear = document.getElementById("clear-button")
 const predButton = document.getElementById("predict-button")
+const selectedImg = document.getElementById("selected-image")
 
 let imageLoaded = false;
 
@@ -52,6 +53,7 @@ $("#clear-button").click(function (){
 	filenameSpan.classList.add('hidden')
 	wrapcon.classList.remove('hidden')
 	predButton.classList.remove('hidden')
+	selectedImg.classList.add('hidden')
 	$("#prediction-list").empty()
 	wrapup.classList.remove("add-height")
 	textHide.classList.add('hidden')
