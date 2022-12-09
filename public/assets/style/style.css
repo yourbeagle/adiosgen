@@ -364,7 +364,7 @@ input[type="file"] {
   
   .image-container {
     margin: 20px 100px;
-    width: 150px;
+    width: 150px !important;
   }
 
   .dashed-border > img {
