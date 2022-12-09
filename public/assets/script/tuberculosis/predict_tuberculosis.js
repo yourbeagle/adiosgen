@@ -16,6 +16,7 @@ $("#file-upload").change(function () {
 	imageLoaded = false;
 	let reader = new FileReader();
 	reader.onload = function () {
+		selectedImg.classList.remove('hidden')
 		let dataURL = reader.result;
 		$("#selected-image").attr("src", dataURL);
 		$("#prediction-list").empty();

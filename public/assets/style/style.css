@@ -287,6 +287,12 @@ input[type="file"] {
     background-color:#000;
 }
 
+.spinner-custom{
+  width: 4.5em !important;
+  height: 4.5em !important;
+  margin-top: 200px;
+}
+
 @media only screen and (max-width: 990px){
   #navbar_wrapper > div{
     margin-left: 0px !important;
@@ -324,6 +330,12 @@ input[type="file"] {
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232155CDFF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     border-radius: 10px;
     height: 200px;
+  }
+
+  .spinner-custom{
+    width: 2.5em !important;
+    height: 2.5em !important;
+    margin-top: 140px;
   }
   
   .image-container {
