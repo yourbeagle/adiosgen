@@ -15,12 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
-    <title>Tuberkolosis | Adios Gen</title>
+    <title>Artikel | Adios Gen</title>
   </head>
-  <body class="test_ubah">
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div id="navbar_wrapper" class="container-fluid">
-        <a class="navbar-brand nav-left" href="./index.html">Adios Gen</a>
+        <a class="navbar-brand nav-left" href=".">Adios Gen</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,7 +38,9 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="./index.html">Beranda</a>
+              <a class="nav-link active" aria-current="page" href="#"
+                >Beranda</a
+              >
             </li>
             <li class="nav-item dropdown">
               <a
@@ -58,10 +60,7 @@
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="./prediction_tuberculosis.html"
-                    aria-current="page"
+                  <a class="dropdown-item" href="./prediction_tuberculosis.html"
                     >Tuberculosis</a
                   >
                 </li>
@@ -74,90 +73,25 @@
               <a class="nav-link" href="panduan.html">Panduan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tentang</a>
+              <a class="nav-link" href="tentang.html">Tentang</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="position-relative">
-      <div
-        id="alert-model"
-        class="alert alert-success alert-dismissible fade show position-absolute top-0 end-0 mt-3 hidden visuallyhidden"
-        role="alert"
-        style="margin-right: 20px !important; width: 300px"
-      >
-        <strong>Model</strong> Telah Berhasil Terload
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="alert"
-          aria-label="Close"
-        ></button>
-      </div>
-    </div>
+
     <div class="container">
       <h1
-        class="text-center text-white fw-bold"
-        style="font-size: 50px; margin-top: 100px"
+        class="text-center text-primary fw-bold"
+        style="font-size: 50px; margin-top: 250px; text-decoration: underline"
       >
-        Selamat Datang di Adios Gen
+        COMING SOON!
       </h1>
-
-      <div class="centered-wrapper">
-        <h5 class="text-white mt-5">Upload Image</h5>
-        <p class="text-white">
-          Silahkan upload gambar X-Ray yang anda ingin cek
-        </p>
-        <div class="wrapper-upload" id="wrap-upload">
-          <div class="d-flex justify-content-center">
-            <div
-              id="spinner-loading"
-              class="spinner-border spinner-custom"
-              role="status"
-            >
-              <span class="visually-hidden">Loading...</span>
-            </div>
-          </div>
-          <div
-            id="wrapped-container"
-            class="dashed-border hidden visuallyhidden"
-          >
-            <img src="./assets/images/file_upload.png" alt="" />
-            <p class="text-center">Drag and drop image here</p>
-            <p class="text-center">- OR -</p>
-            <label for="file-upload" class="custom-file-upload" id="label-file">
-              Upload Gambar
-            </label>
-            <input id="file-upload" class="hidden" type="file" />
-          </div>
-          <img
-            id="selected-image"
-            class="image-container hidden"
-            width="250"
-            alt=""
-          />
-          <p id="filename-span" class="hidden text-center mx-auto"></p>
-          <p id="text-hidden" class="hidden visuallyhidden">Hasil :</p>
-          <button
-            id="predict-button"
-            class="btn btn-primary btn-prediksi hidden visuallyhidden"
-          >
-            PREDIKSI
-          </button>
-          <div id="prediction-list" class="hidden visuallyhidden"></div>
-          <button
-            id="clear-button"
-            class="btn btn-primary btn-prediksi hidden visuallyhidden"
-          >
-            Clear
-          </button>
-        </div>
-      </div>
     </div>
-    <footer id="footer-test" class="bg-dark text-center text-white">
+
+    <footer class="bg-dark text-center text-white fixed-bottom">
       <div class="container p-4 pb-0">
-        <section>
+        <section class="">
           <form action="">
             <div class="row d-flex justify-content-center">
               <div class="col-auto">
@@ -173,6 +107,7 @@
                     class="form-control"
                     placeholder="Alamat Surel"
                   />
+                  <!-- <label class="form-label" for="form5Example29">Email address</label> -->
                 </div>
               </div>
               <div class="col-auto">
@@ -188,7 +123,6 @@
         Copyright © 2022 Adios Gen Developer
       </div>
     </footer>
-
     <script
       src="https://code.jquery.com/jquery-3.6.1.js"
       integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
@@ -200,7 +134,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-    <script src="./assets/script/tuberculosis/target_classes_tuberculosis.js"></script>
-    <script src="./assets/script/tuberculosis/predict_tuberculosis.js"></script>
   </body>
 </html>
